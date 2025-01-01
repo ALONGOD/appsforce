@@ -15,9 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Appsforce User Library",
   description: "User management system for Appsforce interview task",
-  icons: {
-    icon: 'https://img.icons8.com/color/96/user-male-circle--v1.png',
-  },
+  icons: [{
+    rel: 'icon',
+    url: 'https://img.icons8.com/color/96/user-male-circle--v1.png',
+  }, {
+    rel: 'shortcut icon',
+    url: 'https://img.icons8.com/color/96/user-male-circle--v1.png',
+  }],
 };
 
 export default function RootLayout({
