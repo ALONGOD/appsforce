@@ -2,9 +2,8 @@
 
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
 import UserList from './components/UserList';
-// import { User } from './types/user';
 import Image from 'next/image';
-import { FC } from 'react';
+
 const queryClient = new QueryClient()
 
 function HomePage() {
@@ -18,22 +17,38 @@ function HomePage() {
   })
 
   if (isLoading) return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white dark:bg-gray-900">
+    <div className="fixed inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
       <Image
         src="https://res.cloudinary.com/bytesizedpieces/image/upload/v1656084931/article/a-how-to-guide-on-making-an-animated-loading-image-for-a-website/animated_loader_gif_n6b5x0.gif"
         alt="Loading"
         width={200}
         height={200}
         className="w-auto h-auto max-w-[200px]"
+        priority
       />
     </div>
   )
-  if (error) return <div>Error fetching users</div>
+
+  if (error) return (
+    <div className="fixed inset-0 flex items-center justify-center">
+      <div className="bg-red-50 dark:bg-red-900/10 p-4 rounded-lg text-red-600 dark:text-red-400">
+        Error fetching users
+      </div>
+    </div>
+  )
 
   return (
-    <div className="min-h-screen p-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">User Library</h1>
-      <UserList initialUsers={users || []} />
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="bg-white dark:bg-gray-800 shadow-lg mb-8">
+        <div className="container mx-auto py-8">
+          <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white">
+            User Library
+          </h1>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <UserList initialUsers={users || []} />
+      </div>
     </div>
   );
 }

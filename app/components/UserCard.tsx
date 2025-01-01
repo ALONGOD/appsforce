@@ -59,7 +59,6 @@ export default function UserCard({ user, onUpdateUser, onDeleteUser, allUsers }:
                             className="text-xs py-1.5 rounded-full"
                             fullWidth
                         >
-                            Edit
                         </Button>
                         <Button
                             startIcon={<DeleteIcon fontSize="small" />}
@@ -70,7 +69,6 @@ export default function UserCard({ user, onUpdateUser, onDeleteUser, allUsers }:
                             className="text-xs py-1.5 rounded-full"
                             fullWidth
                         >
-                            Delete
                         </Button>
                     </div>
                 </div>
