@@ -31,8 +31,8 @@ function HomePage() {
   )
 
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <header className="bg-white dark:bg-gray-800 shadow-lg mb-8 py-8">
+    <main className="min-h-screen bg-gradient-to-b from-amber-50 via-orange-50 to-yellow-50 dark:from-amber-900/20 dark:via-orange-900/20 dark:to-yellow-900/20">
+      <header className="bg-white/70 dark:bg-gray-800/70 shadow-lg mb-8 py-8 backdrop-blur-sm">
         <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white">
           User Library
         </h1>

@@ -58,7 +58,13 @@ export default function UserList({ initialUsers }: UserListProps) {
                     startIcon={<AddIcon />}
                     onClick={() => setIsAddModalOpen(true)}
                     variant="contained"
-                    color="primary"
+                    sx={{
+                        backgroundColor: 'white',
+                        color: 'black',
+                        '&:hover': {
+                            backgroundColor: '#f0f0f0',
+                        },
+                    }}
                 >
                     Add User
                 </Button>

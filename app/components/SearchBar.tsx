@@ -16,6 +16,9 @@ export default function SearchBar({ searchTerm, searchBy, onSearchChange, onSear
                 value={searchTerm}
                 onChange={(e) => onSearchChange(e.target.value)}
                 style={{ width: '350px' }}
+                sx={{
+                    backgroundColor: 'white',
+                }}
             />
             <FormControl style={{ minWidth: 150 }}>
                 <InputLabel>Search by</InputLabel>
@@ -23,6 +26,9 @@ export default function SearchBar({ searchTerm, searchBy, onSearchChange, onSear
                     value={searchBy}
                     label="Search by"
                     onChange={(e) => onSearchByChange(e.target.value)}
+                    sx={{
+                        backgroundColor: 'white',
+                    }}
                 >
                     <MenuItem value="name">Name</MenuItem>
                     <MenuItem value="email">Email</MenuItem>
