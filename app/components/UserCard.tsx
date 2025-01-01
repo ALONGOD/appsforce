@@ -39,7 +39,7 @@ export default function UserCard({ user, onUpdateUser, onDeleteUser, allUsers }:
                             <h2 className="text-lg font-semibold">
                                 {user.name.title} {user.name.first} {user.name.last}
                             </h2>
-                            <p className="text-gray-600 dark:text-gray-300 text-xs">{user.email}</p>
+                            <p className="text-gray-600 dark:text-gray-300 text-m">{user.email}</p>
                             <div className="text-sm text-gray-700 dark:text-gray-200">
                                 <p>{user.location.street.number} {user.location.street.name}</p>
                                 <p>{user.location.city}, {user.location.country}</p>
@@ -53,21 +53,46 @@ export default function UserCard({ user, onUpdateUser, onDeleteUser, allUsers }:
                         <Button
                             startIcon={<EditIcon fontSize="small" />}
                             onClick={() => setIsEditModalOpen(true)}
-                            variant="outlined"
                             color="primary"
                             size="small"
                             className="text-xs py-1.5 rounded-full"
                             fullWidth
+                            disableRipple
+                            sx={{
+                                '& .MuiButton-startIcon': {
+                                    transition: 'transform 1s',
+                                },
+                                '&:hover .MuiButton-startIcon': {
+                                    transform: 'scale(1.6)',
+                                },
+                                '&:hover': {
+                                    backgroundColor: 'transparent',
+                                    borderColor: 'primary.main',
+                                },
+                            }}
                         >
                         </Button>
+
                         <Button
                             startIcon={<DeleteIcon fontSize="small" />}
                             onClick={() => setIsDeleteDialogOpen(true)}
-                            variant="outlined"
                             color="error"
                             size="small"
                             className="text-xs py-1.5 rounded-full"
                             fullWidth
+                            disableRipple
+                            sx={{
+                                '& .MuiButton-startIcon': {
+                                    transition: 'transform 0.8s',
+                                },
+                                '&:hover .MuiButton-startIcon': {
+                                    transform: 'scale(1.4)',
+                                },
+                                '&:hover': {
+                                    backgroundColor: 'transparent',
+                                    borderColor: 'error.main',
+                                },
+                            }}
                         >
                         </Button>
                     </div>
