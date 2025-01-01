@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 **Appsforce User Management Application**
 
-## Getting Started
+This project was developed as part of the interview process for **Appsforce**. It's a React-based user management application built with cutting-edge technologies like **Next.js** and **Material-UI** for a seamless user experience.
 
-First, run the development server:
+---
 
+## ✨ **Features**
+
+- 📜 **User Listing**: Browse through a list of users with ease.
+- 🔍 **Search Functionality**: Find users by name, email, or ID.
+- 🎨 **Modern UI**: Built with Material-UI for a sleek and professional interface.
+- 📱 **Responsive Design**: Optimized for both desktop and mobile devices.
+- 🛡️ **Type Safety**: Developed using TypeScript to catch errors early and improve maintainability.
+
+---
+
+## 💻 **Technologies Used**
+
+| Technology    | Description                                        |
+|---------------|----------------------------------------------------|
+| **Next.js**   | React framework for server-side rendering and routing. |
+| **Material-UI** | Modern UI component library for React.            |
+| **TypeScript** | Superset of JavaScript for type safety.            |
+| **React Query** | Efficient data fetching and state management.     |
+| **Vercel**    | Cloud platform for fast and reliable deployment.   |
+
+---
+
+## 🚀 **Getting Started**
+
+Follow these steps to set up and run the project locally:
+
+### Step 1: Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Step 2: Navigate to the Project Directory
+```bash
+cd appsforce-user-management
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Step 3: Install Dependencies
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Step 4: Run the Development Server
+```bash
+npm run dev
+```
+Your app will be available at [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 **Live Demo**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The application is deployed on **Vercel** for a live preview.  
+🔗 [Live Demo](https://appsforce-xi.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made with ❤️ by **Alon Goddard**
