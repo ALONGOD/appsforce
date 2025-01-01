@@ -1,5 +1,4 @@
 'use client'
-
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
 import UserList from './components/UserList';
 import Image from 'next/image';
@@ -18,14 +17,8 @@ function HomePage() {
 
   if (isLoading) return (
     <div className="fixed inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
-      <Image
-        src="https://res.cloudinary.com/bytesizedpieces/image/upload/v1656084931/article/a-how-to-guide-on-making-an-animated-loading-image-for-a-website/animated_loader_gif_n6b5x0.gif"
-        alt="Loading"
-        width={200}
-        height={200}
-        className="w-auto h-auto max-w-[200px]"
-        priority
-      />
+      <Image src="https://res.cloudinary.com/bytesizedpieces/image/upload/v1656084931/article/a-how-to-guide-on-making-an-animated-loading-image-for-a-website/animated_loader_gif_n6b5x0.gif"
+        alt="Loading" width={200} height={200} className="w-auto h-auto max-w-[200px]" priority />
     </div>
   )
 
@@ -38,18 +31,16 @@ function HomePage() {
   )
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <div className="bg-white dark:bg-gray-800 shadow-lg mb-8">
-        <div className="container mx-auto py-8">
-          <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white">
-            User Library
-          </h1>
-        </div>
-      </div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <header className="bg-white dark:bg-gray-800 shadow-lg mb-8 py-8">
+        <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white">
+          User Library
+        </h1>
+      </header>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <UserList initialUsers={users || []} />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

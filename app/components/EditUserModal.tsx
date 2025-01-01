@@ -34,7 +34,7 @@ export default function EditUserModal({ open, user, onClose, onSave, allUsers }:
     const validateForm = () => {
         const newErrors: Record<string, string> = {};
 
-        // Name validations
+
         if (formData.firstName.length < 3) {
             newErrors.firstName = 'First name must be at least 3 characters';
         }
@@ -42,13 +42,13 @@ export default function EditUserModal({ open, user, onClose, onSave, allUsers }:
             newErrors.lastName = 'Last name must be at least 3 characters';
         }
 
-        // Email validation
+
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email)) {
             newErrors.email = 'Invalid email format';
         }
 
-        // Unique email check
+
         const emailExists = allUsers.some(u =>
             u.email === formData.email && u.id.value !== user.id.value
         );
@@ -56,7 +56,7 @@ export default function EditUserModal({ open, user, onClose, onSave, allUsers }:
             newErrors.email = 'Email already exists';
         }
 
-        // Required fields
+
         if (!formData.street) newErrors.street = 'Street is required';
         if (!formData.city) newErrors.city = 'City is required';
         if (!formData.country) newErrors.country = 'Country is required';

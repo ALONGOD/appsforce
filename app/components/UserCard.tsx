@@ -25,7 +25,10 @@ export default function UserCard({ user, onUpdateUser, onDeleteUser, allUsers }:
 
     return (
         <>
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col min-h-[300px] w-full">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col min-h-[300px] w-full
+            transition-all duration-300 ease-in-out
+            hover:shadow-xl hover:scale-[1.02] hover:bg-gray-50 dark:hover:bg-gray-750
+            group">
                 <div className="p-4 flex-grow flex flex-col items-center justify-center">
                     <div className="flex flex-col items-center text-center">
                         <Image
