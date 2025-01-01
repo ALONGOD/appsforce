@@ -16,7 +16,7 @@ export const metadata = {
   title: "Appsforce User Library",
   description: "User management system for Appsforce interview task",
   icons: {
-    icon: '/favicon.ico',
+    icon: 'https://img.icons8.com/color/96/user-male-circle--v1.png',
   },
 };
 
@@ -27,9 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <link
+          rel="icon"
+          type="image/png"
+          href="https://img.icons8.com/color/96/user-male-circle--v1.png"
+        />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
